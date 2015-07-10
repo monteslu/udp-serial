@@ -6,7 +6,7 @@ A virtual [node-serialport](https://github.com/voodootikigod/node-serialport) im
 
 # UDPSerialPort
 
-Use mqtt to send/receive data to a remote physical device:
+Use UDP/dgram to send/receive data to a remote physical device:
 
 ```js
 'use strict';
