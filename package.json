@@ -8,6 +8,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Luis Montes",
+  "keywords": [
+    "firmata",
+    "johnny-five",
+    "serialport",
+    "udp",
+    "dgram"
+  ],
   "license": "MIT",
   "dependencies": {
   }
