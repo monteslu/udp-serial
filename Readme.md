@@ -4,6 +4,10 @@ udp-serial
 A virtual [node-serialport](https://github.com/voodootikigod/node-serialport) implementation that uses UDP/dgram as the transport.
 
 
+# Installation
+
+`npm install udp-serial`
+
 # UDPSerialPort
 
 Use UDP/dgram to send/receive data to a remote physical device:
@@ -11,7 +15,7 @@ Use UDP/dgram to send/receive data to a remote physical device:
 ```js
 'use strict';
 
-var VirtualSerialPort = require('../index').SerialPort;
+var VirtualSerialPort = require('udp-serial').SerialPort;
 var firmata = require('firmata');
 
 //create the udp serialport and specify the host and port to connect to
