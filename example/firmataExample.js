@@ -9,7 +9,7 @@ var sp = new VirtualSerialPort({
   port: 41234
 });
 
-var board = new firmata.Board(sp, {reportVersionTimeout:0});
+var board = new firmata.Board(sp, {reportVersionTimeout:1});
 board.on('ready', function(){
   console.log('actually connected to an arduino!');
   board.digitalWrite(13, 1);

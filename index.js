@@ -13,9 +13,9 @@ function UDPSerialPort(options) {
 
   var self = this;
 
-  this.client = dgram.createSocket(this.type);
+  self.client = dgram.createSocket(self.type);
 
-  this.client.on('message', function(data, rinfo){
+  self.client.on('message', function(data, rinfo){
     try{
       self.emit('data', data);
 
@@ -23,6 +23,11 @@ function UDPSerialPort(options) {
       console.log('error on message', exp);
       //self.emit('error', 'error receiving message: ' + exp);
     }
+  });
+
+  self.client.on('listening', function(){
+    //needed for nodebots/johnny-five
+    self.emit('open');
   });
 
 }
